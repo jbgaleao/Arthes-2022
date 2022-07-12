@@ -7,6 +7,7 @@ namespace Arthes_2022.Data.Interfaces
     {
         // Task<Revista?> GetRevistaById(int id);
         Task<IEnumerable<Revista>> GetRevistasToList();
+        Task<Revista> DetailsRevistas(int id);
         // Task<Revista> InsertRevista(CadastraRevistaViewModel revistaVM);
         // Task<Revista> UpdateRevista(CadastraRevistaViewModel revistaVM);
         // Task DeletaRevista(int Id);

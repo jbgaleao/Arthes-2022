@@ -15,10 +15,14 @@ namespace Arthes_2022.Data.Repositories
             _context = context;
         }
 
+        public async Task<Revista> DetailsRevistas(int id) => 
+            await _context.REVISTA.FirstOrDefaultAsync(r => r.Id == id);
 
-        public async Task<IEnumerable<Revista>> GetRevistasToList()
-        {
-            return await _context.REVISTA.ToListAsync();
-        }
+
+        public async Task<IEnumerable<Revista>> GetRevistasToList() => 
+            await _context.REVISTA.ToListAsync();
+        
+
+
     }
 }

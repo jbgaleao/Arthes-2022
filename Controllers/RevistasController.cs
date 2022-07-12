@@ -22,5 +22,11 @@ namespace Arthes_2022.Controllers
         }
 
 
+        // GET: Revistas/Details/5
+        public async Task<IActionResult> Details(int id)
+        {
+             return View(await _repository.DetailsRevistas(id));
+        }
+
     }
 }
